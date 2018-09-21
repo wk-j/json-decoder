@@ -13,8 +13,7 @@ class Data {
 
 var text = File.ReadAllText("resource/Hello.json");
 
-var results = JsonConvert.DeserializeObject<ExpandoObject[]>(text,
-    new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto });
+var results = JsonConvert.DeserializeObject<ExpandoObject[]>(text);
 
 dynamic result = results[0];
 var dict = result as IDictionary<string, object>;
